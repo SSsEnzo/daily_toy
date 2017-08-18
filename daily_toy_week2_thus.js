@@ -1,4 +1,8 @@
 function getAllWords(str) {
-  return str.split(" ");
+  var stringArray = str.split(" ");
+  if(str.length === 0){
+    return [];
+  }
+  return stringArray;
 }
-console.log(getAllWords("you are the best"));
+console.log(getAllWords(""));
