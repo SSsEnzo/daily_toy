@@ -1,23 +1,13 @@
 function getIndexOf(char, str) {
-  var count = 0;
-  var placeHolder = str[0];
   for(var i = 0; i < str.length; i++){
     if(str[i] === char){
-      count++;
+      return i;
     }
   }
-    if(count === 0){
-      return -1;
-    }else{
-     for(var j = 0; j < str.length; j++){
-       if(str[j] === char){
-       return j;
-       }
-    }
-  }
+  return -1;
 };
 
 
 
-var output = getIndexOf('a', 'I am a hacker');
+var output = getIndexOf('b', 'I am a hacker');
 console.log(output); // --> 2

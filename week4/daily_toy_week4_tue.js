@@ -2,11 +2,15 @@ function select(arr, obj) {
   var array1 = {};
   for (var i = 0; i < arr.length; i++){
     for (var key in obj){
-      if (key === arr[i]){
-        array1[key] = obj[key];
+      // if (key == arr[i]){
+      //   array1[key] = obj[key];
+      // }
+      if (obj.hasOwnProperty(arr[i])) {
+        array1[arr[i]] = obj[arr[i]];
       }
     }
   }
+  return array1;
   return array1;
 }
 
