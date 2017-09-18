@@ -1,18 +1,18 @@
 function factors(integer, limit){
   var outcome = [];
-  if (integer[integer.length-1] <= limit){
-   outcome = [];
- } else {
-   for (var i = 0; i < integer.length; i++){
-     if (integer[i] <= limit){
-       outcome.push(integer[i]);
-     }
-   }
+  if (integer < limit){
+    return outcome;
+  } else {
+    for (var i = limit; i <= integer; i++){
+      if (integer % i === 0){
+        outcome.push(i);
+      }
+    }
+    return outcome;
   }
-  return outcome;
 }
 
-array = [1, 2, 3, 4, 5];
 
 
-console.log(factors(array, 6));
+
+console.log(factors(30, 6));
